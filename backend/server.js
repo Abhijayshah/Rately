@@ -55,6 +55,16 @@ app.get('/health', (req, res) => {
   });
 });
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Welcome to Rately API',
+    status: 'Running',
+    documentation: '/api-docs (if available)',
+    health: '/health'
+  });
+});
+
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/admin', adminRoutes);
@@ -111,7 +121,7 @@ async function startServer() {
       console.log('\n  Store Owner:');
       console.log('    GET  /api/stores/owner/dashboard - Store owner dashboard');
       console.log('\n🔐 Default Admin Credentials:');
-      console.log('    Email: admin@storerating.com');
+      console.log('    Email: admin@rately.com');
       console.log('    Password: Admin@123');
       console.log('\n📝 Note: Make sure MongoDB is running and configured properly.');
     });

@@ -8,7 +8,7 @@ async function initializeDatabase() {
     console.log('Checking database initialization...');
     
     // Check if admin exists
-    const adminExists = await User.findOne({ email: 'admin@storerating.com' });
+    const adminExists = await User.findOne({ email: 'admin@rately.com' });
     
     if (!adminExists) {
       console.log('Creating default admin account...');
@@ -18,7 +18,7 @@ async function initializeDatabase() {
       
       await User.create({
         name: 'System Administrator Account',
-        email: 'admin@storerating.com',
+        email: 'admin@rately.com',
         password: hashedPassword,
         address: '123 Admin Street, Admin City, Admin State 12345',
         role: 'system_admin'
@@ -52,7 +52,7 @@ async function initializeDatabase() {
     }
 
     // Check if store owner exists
-    let storeOwner = await User.findOne({ email: 'store@storerating.com' });
+    let storeOwner = await User.findOne({ email: 'store@rately.com' });
     
     if (!storeOwner) {
       console.log('Creating default store owner account...');
@@ -62,7 +62,7 @@ async function initializeDatabase() {
       
       storeOwner = await User.create({
         name: 'Store Owner Account for Testing',
-        email: 'store@storerating.com',
+        email: 'store@rately.com',
         password: hashedPassword,
         address: '789 Store Blvd, Store City, Store State 13579',
         role: 'store_owner'
@@ -92,21 +92,24 @@ async function initializeDatabase() {
 
       // Create dummy ratings for the store
       console.log('Creating default ratings...');
-      const normalUser = await User.findOne({ email: 'user@storerating.com' });
+      const normalUser = await User.findOne({ email: 'user@rately.com' });
       
       // Create additional dummy users for ratings
       const dummyUsers = [];
       for (let i = 1; i <= 4; i++) {
-        let user = await User.findOne({ email: `user${i}@storerating.com` });
+        let user = await User.findOne({ email: `user${i}@rately.com` });
+        
         if (!user) {
-          const hashedPassword = await bcrypt.hash('User@123', 10);
-            user = await User.create({
-              name: `Test User ${i} - Verified Account`,
-              email: `user${i}@storerating.com`,
-              password: hashedPassword,
-              role: 'normal_user',
-              address: `Test Address ${i} - Detailed Location Info`
-            });
+          const saltRounds = 10;
+          const hashedPassword = await bcrypt.hash('User@123', saltRounds);
+          
+          user = await User.create({
+            name: `Test User ${i}`,
+            email: `user${i}@rately.com`,
+            password: hashedPassword,
+            address: `Test Address ${i}`,
+            role: 'normal_user'
+          });
         }
         dummyUsers.push(user);
       }
@@ -133,21 +136,21 @@ async function initializeDatabase() {
       const ratingsCount = await Rating.countDocuments({ store: storeExists._id });
       if (ratingsCount < 5) {
         console.log('Ensuring default ratings for existing store...');
-        const normalUser = await User.findOne({ email: 'user@storerating.com' });
+        const normalUser = await User.findOne({ email: 'user@rately.com' });
         
         // Create additional dummy users for ratings
         const dummyUsers = [];
         for (let i = 1; i <= 4; i++) {
-          let user = await User.findOne({ email: `user${i}@storerating.com` });
+          let user = await User.findOne({ email: `user${i}@rately.com` });
           if (!user) {
             const hashedPassword = await bcrypt.hash('User@123', 10);
-          user = await User.create({
-            name: `Test User ${i} - Verified Account`,
-            email: `user${i}@storerating.com`,
-            password: hashedPassword,
-            role: 'normal_user',
-            address: `Test Address ${i} - Detailed Location Info`
-          });
+            user = await User.create({
+              name: `Test User ${i} - Verified Account`,
+              email: `user${i}@rately.com`,
+              password: hashedPassword,
+              role: 'normal_user',
+              address: `Test Address ${i} - Detailed Location Info`
+            });
           }
           dummyUsers.push(user);
         }
@@ -200,13 +203,13 @@ async function initializeDatabase() {
     console.log('Default credentials:');
     console.log('-------------------------');
     console.log('Admin:');
-    console.log('  Email: admin@storerating.com');
+    console.log('  Email: admin@rately.com');
     console.log('  Password: Admin@123');
     console.log('User:');
-    console.log('  Email: user@storerating.com');
+    console.log('  Email: user@rately.com');
     console.log('  Password: User@123');
     console.log('Store Owner:');
-    console.log('  Email: store@storerating.com');
+    console.log('  Email: store@rately.com');
     console.log('  Password: Store@123');
     console.log('-------------------------');
     
