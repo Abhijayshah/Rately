@@ -30,7 +30,7 @@ async function initializeDatabase() {
     }
 
     // Check if normal user exists
-    const userExists = await User.findOne({ email: 'user@storerating.com' });
+    const userExists = await User.findOne({ email: 'user@rately.com' });
     
     if (!userExists) {
       console.log('Creating default normal user account...');
@@ -40,7 +40,7 @@ async function initializeDatabase() {
       
       await User.create({
         name: 'Normal User Account for Testing',
-        email: 'user@storerating.com',
+        email: 'user@rately.com',
         password: hashedPassword,
         address: '456 User Avenue, User City, User State 67890',
         role: 'normal_user'
@@ -74,7 +74,18 @@ async function initializeDatabase() {
     }
 
     // Check if store exists for the owner
-    const storeExists = await Store.findOne({ owner: storeOwner._id });
+    let storeExists = await Store.findOne({ owner: storeOwner._id });
+    
+    // If not found by owner, check by email (to handle DB state from previous deployments)
+    if (!storeExists) {
+      const storeByEmail = await Store.findOne({ email: 'info@techgadgets.com' });
+      if (storeByEmail) {
+        console.log('Found store by email. Updating owner...');
+        storeByEmail.owner = storeOwner._id;
+        await storeByEmail.save();
+        storeExists = storeByEmail;
+      }
+    }
     
     if (!storeExists) {
       console.log('Creating default store for store owner...');
