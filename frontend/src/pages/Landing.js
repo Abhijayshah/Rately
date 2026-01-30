@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Store, Star, Shield, TrendingUp, Users, ArrowRight, LayoutDashboard } from 'lucide-react';
+import { Store, Star, Shield, TrendingUp, ArrowRight } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 const Landing = () => {
@@ -25,7 +25,7 @@ const Landing = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [backgroundImages.length]);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white font-sans overflow-x-hidden">

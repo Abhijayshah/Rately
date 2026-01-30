@@ -210,7 +210,7 @@ const Register = () => {
         
         {/* Footer */}
         <div className="text-center text-xs text-gray-500">
-          <p>© 2024 StoreRating System. All rights reserved.</p>
+          <p>© 2024 Rately. All rights reserved.</p>
         </div>
       </div>
     </div>

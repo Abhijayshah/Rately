@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { Store, Mail, Lock, ArrowLeft } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
@@ -9,7 +9,6 @@ import Button from '../../components/ui/Button';
 const Login = () => {
   const { login, isAuthenticated, isLoading } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const {
@@ -131,7 +130,7 @@ const Login = () => {
         
         {/* Footer */}
         <div className="text-center text-xs text-gray-500">
-          <p>© 2024 StoreRating System. All rights reserved.</p>
+          <p>© 2024 Rately. All rights reserved.</p>
         </div>
       </div>
     </div>

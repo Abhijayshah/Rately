@@ -8,7 +8,7 @@ import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 
 const Settings = () => {
-  const { user, updatePassword, login } = useAuth();
+  const { user, updatePassword } = useAuth();
   const [activeTab, setActiveTab] = useState('profile');
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
@@ -29,7 +29,6 @@ const Settings = () => {
   const {
     register: registerProfile,
     handleSubmit: handleSubmitProfile,
-    reset: resetProfile,
     formState: { errors: profileErrors },
     setValue: setProfileValue,
   } = useForm();
@@ -66,7 +65,7 @@ const Settings = () => {
   const onSubmitProfile = async (data) => {
     setIsUpdating(true);
     try {
-      const response = await authAPI.updateProfile({
+      await authAPI.updateProfile({
         name: data.name,
         email: data.email,
         address: data.address,
