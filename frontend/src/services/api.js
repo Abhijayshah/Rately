@@ -1,9 +1,26 @@
 import axios from 'axios';
 
 const getBaseUrl = () => {
-  if (process.env.REACT_APP_API_URL) return process.env.REACT_APP_API_URL;
-  if (process.env.NODE_ENV === 'production') return 'https://rately-aq95.onrender.com/api';
-  return 'http://localhost:5001/api';
+  let url;
+  if (process.env.REACT_APP_API_URL) {
+    url = process.env.REACT_APP_API_URL;
+  } else if (process.env.NODE_ENV === 'production') {
+    url = 'https://rately-aq95.onrender.com/api';
+  } else {
+    url = 'http://localhost:5001/api';
+  }
+
+  // Ensure URL ends with /api
+  if (!url.endsWith('/api')) {
+    url = `${url}/api`;
+  }
+  
+  // Fix double slash if present (e.g. /api/api -> /api)
+  if (url.endsWith('/api/api')) {
+    url = url.replace('/api/api', '/api');
+  }
+  
+  return url;
 };
 
 // Create axios instance with base configuration
