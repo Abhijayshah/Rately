@@ -1,6 +1,12 @@
-# Rately - Store Rating System
+# Rately - Store Rating System - Full Stack Web Application | MongoDB |  MERN stack  | Upadated - adding ai chatbot 
+## Live Demo: https://www.youtube.com/watch?v=fecxs_GVXm4  
+## Github Repo link :Upadating - adding ai chatbot , smooth login -option- continue with google account : https://github.com/Abhijayshah/Rately_1
 
 A full-stack application for rating and reviewing stores, featuring separate interfaces for Users, Store Owners, and Admins.
+
+Store Rating System - Full Stack Web Application
+Live Demo: https://www.youtube.com/watch?v=fecxs_GVXm4
+A comprehensive store rating and management system built with React (TypeScript) frontend and Node.js/Express backend with PostgreSQL database.
 
 ## 🚀 Deployment Guide
 
