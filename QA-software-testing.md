@@ -24,12 +24,12 @@
 11. [Security Testing Concepts](#11-security-testing-concepts)
 12. [Test Documentation Templates](#12-test-documentation-templates)
 13. [Testing Tools Overview](#13-testing-tools-overview)
-14. [Rately — Complete Manual Test Cases](#14-rately--complete-manual-test-cases)
-15. [Rately — API Test Cases](#15-rately--api-test-cases)
-16. [Rately — End to End Test Scenarios](#16-rately--end-to-end-test-scenarios)
-17. [Rately — Real Bug Reports from Development](#17-rately--real-bug-reports-from-development)
-18. [Rately — Complete Test Plan](#18-rately--complete-test-plan)
-19. [Rately — Interview Q&A (60 questions)](#19-rately--interview-qa-60-questions)
+14. [Rately - Complete Manual Test Cases](#14-rately---complete-manual-test-cases)
+15. [Rately - API Test Cases](#15-rately---api-test-cases)
+16. [Rately - End to End Test Scenarios](#16-rately---end-to-end-test-scenarios)
+17. [Rately - Real Bug Reports from Development](#17-rately---real-bug-reports-from-development)
+18. [Rately - Complete Test Plan](#18-rately---complete-test-plan)
+19. [Rately - Interview Q&A (60 questions)](#19-rately---interview-qa-60-questions)
 20. [Quick Fire Round (35 questions)](#20-quick-fire-round-35-questions)
 21. [Top 10 Things to Say That Impress Interviewers](#21-top-10-things-to-say-that-impress-interviewers)
 22. [Common Mistakes Junior QA Engineers Make](#22-common-mistakes-junior-qa-engineers-make)
@@ -318,7 +318,7 @@ export default function () {
 
 ---
 
-## 14. RATELY — COMPLETE MANUAL TEST CASES
+## 14. RATELY - COMPLETE MANUAL TEST CASES
 
 | ID | Module | Title | Preconditions | Steps | Expected Result | Priority | Type |
 |----|--------|-------|---------------|-------|-----------------|----------|------|
@@ -360,7 +360,7 @@ export default function () {
 
 ---
 
-## 15. RATELY — API TEST CASES
+## 15. RATELY - API TEST CASES
 
 1. **POST /api/auth/register**:
    - Valid body -> 201 Created.
@@ -441,7 +441,7 @@ export default function () {
 
 ---
 
-## 18. RATELY — COMPLETE TEST PLAN 📋
+## 18. RATELY - COMPLETE TEST PLAN
 
 ### 1. Introduction
 This test plan covers the QA activities for Rately v1.0, focusing on role-based access and data integrity of the rating system.
@@ -461,7 +461,7 @@ This test plan covers the QA activities for Rately v1.0, focusing on role-based 
 
 ---
 
-## 19. RATELY — INTERVIEW Q&A (60 QUESTIONS) 🎤
+## 19. RATELY - INTERVIEW Q&A (60 QUESTIONS)
 
 ### Category A — General QA (15)
 1. **[Easy] What is the difference between a Bug, Defect, and Failure?**
@@ -593,7 +593,7 @@ This test plan covers the QA activities for Rately v1.0, focusing on role-based 
 
 ---
 
-## 20. QUICK FIRE ROUND ⚡
+## 20. QUICK FIRE ROUND (35 QUESTIONS)
 
 1. **What is 404?** Not Found.
 2. **What is 401?** Unauthorized (No login).
@@ -633,7 +633,7 @@ This test plan covers the QA activities for Rately v1.0, focusing on role-based 
 
 ---
 
-## 21. TOP 10 THINGS TO SAY THAT IMPRESS INTERVIEWERS 🌟
+## 21. TOP 10 THINGS TO SAY THAT IMPRESS INTERVIEWERS
 
 1. **"I don't just find bugs; I look for the root cause in the code."** (Shows technical depth).
 2. **"I prioritize tests based on business risk, starting with the auth flows."** (Shows business alignment).
@@ -648,7 +648,7 @@ This test plan covers the QA activities for Rately v1.0, focusing on role-based 
 
 ---
 
-## 22. COMMON MISTAKES JUNIOR QA ENGINEERS MAKE ⚠️
+## 22. COMMON MISTAKES JUNIOR QA ENGINEERS MAKE
 
 1. **Mistake**: Not checking console logs. **Avoid by**: Always keeping DevTools open.
 2. **Mistake**: Testing only the "Happy Path". **Avoid by**: Spending 50% time on negative testing.

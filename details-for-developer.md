@@ -14,11 +14,11 @@
 6. [API Endpoints](#6-api-endpoints)
 7. [Styling System](#7-styling-system)
 8. [Environment Variables](#8-environment-variables)
-9. [Initial Database Setup](#9-initial-database-setup-for-development)
-10. [Scripts & Commands](#10-scripts--commands)
+9. [Initial Database Setup](#9-initial-database-setup)
+10. [Scripts and Commands](#10-scripts-and-commands)
 11. [Dependencies](#11-dependencies)
 12. [Deployment Notes](#12-deployment-notes)
-13. [Future Sections](#13-future-sections-placeholder)
+13. [Future Sections](#13-future-sections)
 
 ---
 
@@ -183,7 +183,7 @@ Rately/
 
 ---
 
-## 9. INITIAL DATABASE SETUP (FOR DEVELOPMENT)
+## 9. INITIAL DATABASE SETUP
 The backend automatically initializes the database with default accounts if they don't exist. This is useful for testing.
 
 | Role | Email | Password | Purpose |
@@ -194,7 +194,7 @@ The backend automatically initializes the database with default accounts if they
 
 ---
 
-## 10. SCRIPTS & COMMANDS
+## 10. SCRIPTS AND COMMANDS
 
 ### Frontend
 - `npm start`: Runs the app in development mode at `http://localhost:3000`.
@@ -233,7 +233,7 @@ The backend automatically initializes the database with default accounts if they
 
 ---
 
-## 13. FUTURE SECTIONS (Placeholder)
+## 13. FUTURE SECTIONS
 - [Add new sections as needed by developers]
 - TODO: Implement comprehensive unit and integration tests.
 - TODO: Add API documentation using Swagger/OpenAPI.
