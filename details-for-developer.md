@@ -5,6 +5,23 @@
 
 ---
 
+## TABLE OF CONTENTS
+1. [Project Overview](#1-project-overview)
+2. [Tech Stack](#2-tech-stack)
+3. [File Structure](#3-file-structure)
+4. [Key Components](#4-key-components)
+5. [Routing Structure](#5-routing-structure)
+6. [API Endpoints](#6-api-endpoints)
+7. [Styling System](#7-styling-system)
+8. [Environment Variables](#8-environment-variables)
+9. [Initial Database Setup](#9-initial-database-setup-for-development)
+10. [Scripts & Commands](#10-scripts--commands)
+11. [Dependencies](#11-dependencies)
+12. [Deployment Notes](#12-deployment-notes)
+13. [Future Sections](#13-future-sections-placeholder)
+
+---
+
 ## 1. PROJECT OVERVIEW
 - **Project Name**: Rately
 - **Description**: A comprehensive store rating platform designed for users to discover and rate local stores, and for store owners to manage their store's reputation and view analytics.

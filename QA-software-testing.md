@@ -36,7 +36,7 @@
 
 ---
 
-## 1. INTRODUCTION TO SOFTWARE TESTING 🚀
+## 1. INTRODUCTION TO SOFTWARE TESTING
 
 Software testing is the process of evaluating and verifying that a software application or system does what it is supposed to do. It aims to identify defects, ensure quality, and reduce the risk of failure in production.
 
@@ -67,7 +67,7 @@ In **Rately**, testing is crucial because it handles sensitive user data (passwo
 
 ---
 
-## 2. TYPES OF TESTING 🛠️
+## 2. TYPES OF TESTING
 
 ### Functional Testing
 - **Unit Testing**: Testing individual components. Example: Testing a utility function that formats the "Average Rating" to one decimal place.
@@ -88,7 +88,7 @@ In **Rately**, testing is crucial because it handles sensitive user data (passwo
 
 ---
 
-## 3. TESTING LEVELS 📊
+## 3. TESTING LEVELS
 
 | Level | What gets tested | Who tests it | Tools Used | Rately Example |
 |-------|------------------|--------------|------------|----------------|
@@ -99,7 +99,7 @@ In **Rately**, testing is crucial because it handles sensitive user data (passwo
 
 ---
 
-## 4. TEST CASE DESIGN TECHNIQUES 🎨
+## 4. TEST CASE DESIGN TECHNIQUES
 
 ### Equivalence Partitioning (EP)
 Divide input into groups that are expected to be treated the same.
@@ -131,7 +131,7 @@ Based on experience, guessing where bugs might hide.
 
 ---
 
-## 5. BUG LIFE CYCLE AND BUG REPORTS 🐞
+## 5. BUG LIFE CYCLE AND BUG REPORTS
 
 ### Bug Life Cycle Flowchart
 ```text
@@ -153,7 +153,7 @@ New -> Open -> Assigned -> In-Progress -> Fixed -> Pending Retest -> Verified ->
 
 ---
 
-## 6. TESTING METHODOLOGIES 🗺️
+## 6. TESTING METHODOLOGIES
 
 ### Methodologies Overview
 - **Waterfall**: Sequential steps (Plan -> Design -> Build -> Test). Not used in Rately.
@@ -181,7 +181,7 @@ New -> Open -> Assigned -> In-Progress -> Fixed -> Pending Retest -> Verified ->
 
 ---
 
-## 7. API TESTING 🌐
+## 7. API TESTING
 
 ### HTTP Status Codes
 | Code | Meaning | Rately Example |
@@ -215,7 +215,7 @@ pm.test("User role is normal_user", function () {
 
 ---
 
-## 8. DATABASE TESTING 🗄️
+## 8. DATABASE TESTING
 
 ### What to Verify
 1. **Data Integrity**: Does deleting a user also handle their ratings? (Orphaned data).
@@ -236,7 +236,7 @@ db.ratings.aggregate([
 
 ---
 
-## 9. UI AND FRONTEND TESTING 🖥️
+## 9. UI AND FRONTEND TESTING
 
 ### Form Test Cases
 - **Registration Form**: 
@@ -256,7 +256,7 @@ db.ratings.aggregate([
 
 ---
 
-## 10. PERFORMANCE TESTING CONCEPTS ⚡
+## 10. PERFORMANCE TESTING CONCEPTS
 
 ### Metrics
 - **Response Time**: Time for the API to return the store list (Target: < 200ms).
@@ -276,7 +276,7 @@ export default function () {
 
 ---
 
-## 11. SECURITY TESTING CONCEPTS 🔒
+## 11. SECURITY TESTING CONCEPTS
 
 ### Key Security Tests
 1. **Broken Access Control**: Try accessing `/api/admin/dashboard/stats` with a `normal_user` token.
@@ -286,7 +286,7 @@ export default function () {
 
 ---
 
-## 12. TEST DOCUMENTATION TEMPLATES 📝
+## 12. TEST DOCUMENTATION TEMPLATES
 
 ### Test Plan Template (Rately)
 - **Scope**: Auth, Store Browsing, Rating, Admin Dashboard.
@@ -306,7 +306,7 @@ export default function () {
 
 ---
 
-## 13. TESTING TOOLS OVERVIEW 🧰
+## 13. TESTING TOOLS OVERVIEW
 
 | Category | Tool | Purpose in Rately |
 |----------|------|-------------------|
@@ -318,7 +318,7 @@ export default function () {
 
 ---
 
-## 14. RATELY — COMPLETE MANUAL TEST CASES 📋
+## 14. RATELY — COMPLETE MANUAL TEST CASES
 
 | ID | Module | Title | Preconditions | Steps | Expected Result | Priority | Type |
 |----|--------|-------|---------------|-------|-----------------|----------|------|
@@ -360,7 +360,7 @@ export default function () {
 
 ---
 
-## 15. RATELY — API TEST CASES 📡
+## 15. RATELY — API TEST CASES
 
 1. **POST /api/auth/register**:
    - Valid body -> 201 Created.
@@ -381,7 +381,7 @@ export default function () {
 
 ---
 
-## 16. END TO END TEST SCENARIOS 🔄
+## 16. END TO END TEST SCENARIOS
 
 1. **Scenario**: New Store Owner Onboarding
    - **Actor**: System Admin
@@ -426,7 +426,7 @@ export default function () {
 
 ---
 
-## 17. REAL BUG REPORTS FROM DEVELOPMENT 🐜
+## 17. REAL BUG REPORTS FROM DEVELOPMENT
 
 | ID | Title | Module | Severity | Root Cause | Fix Applied |
 |----|-------|--------|----------|------------|-------------|
